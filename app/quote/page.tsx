@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function QuotePage() {
   return (
     <>
-      <section className="bg-gradient-to-br from-primary-dark via-primary to-primary-light/30 py-20">
+      <section className="bg-linear-to-br from-primary-dark via-primary to-primary-light/30 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Get A Quote" }]} />
           <div className="text-center mt-6">
@@ -81,7 +81,7 @@ export default function QuotePage() {
                   className="w-14 h-14 rounded-full border-2 border-accent mb-3 object-cover"
                 />
                 <h3 className="font-bold mb-2">Chaunci Witherspoon</h3>
-                <p className="text-white/50 text-xs mb-4">Owner / Mortgage Broker · NMLS# 1703351</p>
+                <p className="text-white/70 text-xs mb-4">Owner / Mortgage Broker · NMLS# 1703351</p>
                 <div className="space-y-2">
                   <a
                     href="sms:8136380862"

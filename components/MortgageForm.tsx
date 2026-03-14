@@ -295,7 +295,7 @@ export default function MortgageForm({ formName = "Mortgage Pre-Qualification", 
     return (
       <div className="text-center py-12">
         <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 success-pop">
-          <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+          <svg aria-hidden="true" className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
             <path className="draw-check" strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
         </div>
@@ -317,7 +317,7 @@ export default function MortgageForm({ formName = "Mortgage Pre-Qualification", 
           <p className="text-sm text-text-muted mb-2">Have you worked with us before?</p>
           <a href="https://g.page/r/kinsfolkmortgage/review" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-accent hover:text-accent-dark font-medium transition-colors">
             Leave us a Google review
-            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+            <svg aria-hidden="true" className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
           </a>
         </div>
       </div>
@@ -385,6 +385,7 @@ export default function MortgageForm({ formName = "Mortgage Pre-Qualification", 
                 }
               }}
               placeholder="Enter city or zip code..."
+              aria-label="City or zip code"
               className="w-full px-5 py-3.5 rounded-xl border-2 border-border focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/10 text-sm transition-all duration-200"
               autoFocus
             />
@@ -405,6 +406,7 @@ export default function MortgageForm({ formName = "Mortgage Pre-Qualification", 
               step={step.step}
               value={answers[step.field!] || step.min}
               onChange={(e) => setAnswers((prev) => ({ ...prev, [step.field!]: e.target.value }))}
+              aria-label={step.question}
               className="w-full accent-accent"
             />
             <div className="flex justify-between text-xs text-text-muted mt-2">
@@ -561,7 +563,7 @@ export default function MortgageForm({ formName = "Mortgage Pre-Qualification", 
           >
             {submitting ? (
               <>
-                <svg className="animate-spin w-4 h-4" viewBox="0 0 24 24" fill="none">
+                <svg aria-hidden="true" className="animate-spin w-4 h-4" viewBox="0 0 24 24" fill="none">
                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
                 </svg>

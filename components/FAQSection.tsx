@@ -43,6 +43,7 @@ function AccordionItem({ item, isOpen, onToggle, id }: {
         </span>
         <span className={`flex items-center justify-center w-7 h-7 rounded-full shrink-0 transition-all duration-300 ${isOpen ? "bg-accent/10 rotate-180" : "bg-bg-light group-hover:bg-accent/10"}`}>
           <svg
+            aria-hidden="true"
             className={`w-4 h-4 transition-colors duration-200 ${isOpen ? "text-accent" : "text-text-muted"}`}
             fill="none"
             stroke="currentColor"

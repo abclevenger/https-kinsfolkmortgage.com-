@@ -73,7 +73,7 @@ export default function LearningCenterPage() {
           {articleCategories.map((cat) => (
             <div key={cat.name} className="mb-16">
               <div className="flex items-center gap-4 mb-8">
-                <div className="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0">
+                <div className="w-16 h-16 rounded-xl overflow-hidden shrink-0">
                   <Image
                     src={cat.image}
                     alt={cat.name}
@@ -99,7 +99,7 @@ export default function LearningCenterPage() {
                     className="group bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-all border border-border/50 hover:border-accent/30"
                   >
                     <div className="flex items-start gap-3">
-                      <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-xs font-bold">
+                      <span className="shrink-0 w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-xs font-bold">
                         {cat.range[0] + idx + 1}
                       </span>
                       <div>

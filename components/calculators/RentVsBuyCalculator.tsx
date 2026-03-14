@@ -128,41 +128,41 @@ export default function RentVsBuyCalculator({ onGetQuote }: Props) {
     <div className="space-y-6">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <div>
-          <label className={labelClass}>Monthly Rent ($)</label>
-          <input type="number" value={monthlyRent} onChange={(e) => setMonthlyRent(parseFloat(e.target.value) || 0)} min={0} step={100} className={inputClass} />
+          <label htmlFor="monthly-rent" className={labelClass}>Monthly Rent ($)</label>
+          <input id="monthly-rent" type="number" value={monthlyRent} onChange={(e) => setMonthlyRent(parseFloat(e.target.value) || 0)} min={0} step={100} className={inputClass} />
         </div>
         <div>
-          <label className={labelClass}>Home Price ($)</label>
-          <input type="number" value={homePrice} onChange={(e) => setHomePrice(parseFloat(e.target.value) || 0)} min={0} step={5000} className={inputClass} />
+          <label htmlFor="home-price" className={labelClass}>Home Price ($)</label>
+          <input id="home-price" type="number" value={homePrice} onChange={(e) => setHomePrice(parseFloat(e.target.value) || 0)} min={0} step={5000} className={inputClass} />
         </div>
         <div>
-          <label className={labelClass}>Down Payment (%)</label>
-          <input type="number" value={downPaymentPct} onChange={(e) => setDownPaymentPct(parseFloat(e.target.value) || 0)} min={0} max={100} step={1} className={inputClass} />
+          <label htmlFor="down-payment-pct" className={labelClass}>Down Payment (%)</label>
+          <input id="down-payment-pct" type="number" value={downPaymentPct} onChange={(e) => setDownPaymentPct(parseFloat(e.target.value) || 0)} min={0} max={100} step={1} className={inputClass} />
           <p className="text-xs text-text-muted mt-1">{fmtCurrency(homePrice * (downPaymentPct / 100))}</p>
         </div>
         <div>
-          <label className={labelClass}>Interest Rate (%)</label>
-          <input type="number" value={rate} onChange={(e) => setRate(parseFloat(e.target.value) || 0)} min={0} max={20} step={0.125} className={inputClass} />
+          <label htmlFor="interest-rate" className={labelClass}>Interest Rate (%)</label>
+          <input id="interest-rate" type="number" value={rate} onChange={(e) => setRate(parseFloat(e.target.value) || 0)} min={0} max={20} step={0.125} className={inputClass} />
         </div>
         <div>
-          <label className={labelClass}>Property Tax Rate (%)</label>
-          <input type="number" value={propertyTaxRate} onChange={(e) => setPropertyTaxRate(parseFloat(e.target.value) || 0)} min={0} max={5} step={0.1} className={inputClass} />
+          <label htmlFor="property-tax-rate" className={labelClass}>Property Tax Rate (%)</label>
+          <input id="property-tax-rate" type="number" value={propertyTaxRate} onChange={(e) => setPropertyTaxRate(parseFloat(e.target.value) || 0)} min={0} max={5} step={0.1} className={inputClass} />
         </div>
         <div>
-          <label className={labelClass}>Home Insurance ($/yr)</label>
-          <input type="number" value={homeInsurance} onChange={(e) => setHomeInsurance(parseFloat(e.target.value) || 0)} min={0} step={100} className={inputClass} />
+          <label htmlFor="home-insurance" className={labelClass}>Home Insurance ($/yr)</label>
+          <input id="home-insurance" type="number" value={homeInsurance} onChange={(e) => setHomeInsurance(parseFloat(e.target.value) || 0)} min={0} step={100} className={inputClass} />
         </div>
         <div>
-          <label className={labelClass}>HOA ($/mo)</label>
-          <input type="number" value={hoa} onChange={(e) => setHoa(parseFloat(e.target.value) || 0)} min={0} step={25} className={inputClass} />
+          <label htmlFor="hoa" className={labelClass}>HOA ($/mo)</label>
+          <input id="hoa" type="number" value={hoa} onChange={(e) => setHoa(parseFloat(e.target.value) || 0)} min={0} step={25} className={inputClass} />
         </div>
         <div>
-          <label className={labelClass}>Expected Appreciation (%/yr)</label>
-          <input type="number" value={appreciationRate} onChange={(e) => setAppreciationRate(parseFloat(e.target.value) || 0)} min={-5} max={15} step={0.5} className={inputClass} />
+          <label htmlFor="appreciation-rate" className={labelClass}>Expected Appreciation (%/yr)</label>
+          <input id="appreciation-rate" type="number" value={appreciationRate} onChange={(e) => setAppreciationRate(parseFloat(e.target.value) || 0)} min={-5} max={15} step={0.5} className={inputClass} />
         </div>
         <div>
-          <label className={labelClass}>Time Horizon (years)</label>
-          <input type="number" value={timeHorizon} onChange={(e) => setTimeHorizon(parseFloat(e.target.value) || 1)} min={1} max={30} step={1} className={inputClass} />
+          <label htmlFor="time-horizon" className={labelClass}>Time Horizon (years)</label>
+          <input id="time-horizon" type="number" value={timeHorizon} onChange={(e) => setTimeHorizon(parseFloat(e.target.value) || 1)} min={1} max={30} step={1} className={inputClass} />
         </div>
       </div>
 

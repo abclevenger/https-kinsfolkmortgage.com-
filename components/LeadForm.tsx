@@ -121,7 +121,7 @@ export default function LeadForm({
     return (
       <div className="text-center py-8">
         <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3 success-pop">
-          <svg className="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+          <svg aria-hidden="true" className="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
             <path className="draw-check" strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
         </div>
@@ -136,7 +136,7 @@ export default function LeadForm({
           <p className="text-sm text-text-muted mb-2">Have you worked with us before?</p>
           <a href="https://g.page/r/kinsfolkmortgage/review" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-accent hover:text-accent-dark font-medium transition-colors">
             Leave us a Google review
-            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+            <svg aria-hidden="true" className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
           </a>
         </div>
       </div>
@@ -144,7 +144,7 @@ export default function LeadForm({
   }
 
   const inputClass = (field: string) =>
-    `w-full px-4 py-3 rounded-xl border-2 focus:outline-none text-sm transition-all duration-200 ${
+    `w-full px-4 py-3 rounded-xl border-2 bg-white text-text-dark focus:outline-none text-sm transition-all duration-200 ${
       errors[field]
         ? "border-red-400 focus:border-red-500 focus:ring-2 focus:ring-red-100"
         : "border-border focus:border-accent focus:ring-2 focus:ring-accent/10"
@@ -224,7 +224,7 @@ export default function LeadForm({
             value={form.message}
             onChange={(e) => update("message", e.target.value)}
             rows={3}
-            className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/10 text-sm transition-all duration-200 resize-none"
+            className="w-full px-4 py-3 rounded-xl border-2 border-border bg-white text-text-dark focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/10 text-sm transition-all duration-200 resize-none"
           />
         </div>
       )}
@@ -259,7 +259,7 @@ export default function LeadForm({
 
       {submitError && (
         <div className="bg-red-50 border border-red-200 rounded-xl px-4 py-3 text-red-700 text-sm flex items-start gap-2">
-          <svg className="w-4 h-4 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg aria-hidden="true" className="w-4 h-4 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z" />
           </svg>
           {submitError}
@@ -273,7 +273,7 @@ export default function LeadForm({
       >
         {submitting ? (
           <>
-            <svg className="animate-spin w-4 h-4" viewBox="0 0 24 24" fill="none">
+            <svg aria-hidden="true" className="animate-spin w-4 h-4" viewBox="0 0 24 24" fill="none">
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
               <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
             </svg>

@@ -77,7 +77,7 @@ export default function ChaunciWitherspoonPage() {
     <>
       {/* Hero */}
       <section className="relative bg-primary py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-dark/50 to-primary/80" />
+        <div className="absolute inset-0 bg-linear-to-br from-primary-dark/50 to-primary/80" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -88,7 +88,7 @@ export default function ChaunciWitherspoonPage() {
                 Chaunci Witherspoon
               </h1>
               <p className="text-white/70 text-lg mb-1">Owner / Mortgage Broker</p>
-              <p className="text-white/50 text-sm mb-6">NMLS# 1703351</p>
+              <p className="text-white/70 text-sm mb-6">NMLS# 1703351</p>
 
               <div className="flex items-center gap-3 mb-6">
                 <a

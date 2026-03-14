@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function ContactMePage() {
   return (
     <>
-      <section className="bg-gradient-to-br from-primary-dark via-primary to-primary-light/30 py-20">
+      <section className="bg-linear-to-br from-primary-dark via-primary to-primary-light/30 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Contact Us" }]} />
           <div className="text-center mt-6">

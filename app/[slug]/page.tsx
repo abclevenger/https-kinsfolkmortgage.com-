@@ -52,7 +52,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               className="w-8 h-8 rounded-full object-cover"
             />
             <span>Chaunci Witherspoon</span>
-            <span className="text-white/30">·</span>
+            <span className="text-white/60">·</span>
             <time>{post.date}</time>
           </div>
         </div>

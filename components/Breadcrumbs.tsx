@@ -24,11 +24,11 @@ export default function Breadcrumbs({ items }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <nav aria-label="Breadcrumb" className="text-sm text-white/50">
+      <nav aria-label="Breadcrumb" className="text-sm text-white/70">
         <ol className="flex items-center gap-1.5 flex-wrap">
           {items.map((item, i) => (
             <li key={i} className="flex items-center gap-1.5">
-              {i > 0 && <span className="text-white/30">/</span>}
+              {i > 0 && <span className="text-white/60">/</span>}
               {item.href ? (
                 <Link href={item.href} className="hover:text-accent transition-colors">
                   {item.label}

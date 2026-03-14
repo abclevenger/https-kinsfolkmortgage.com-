@@ -61,7 +61,7 @@ export default function TrustBar() {
                 )}
                 {stat.isDecimal && <span className="text-lg ml-0.5">★</span>}
               </p>
-              <p className="text-white/50 text-sm mt-1">{stat.label}</p>
+              <p className="text-white/70 text-sm mt-1">{stat.label}</p>
             </div>
           ))}
         </div>

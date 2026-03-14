@@ -116,20 +116,20 @@ export default function AmortizationCalculator({ onGetQuote }: Props) {
     <div className="space-y-6">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <div>
-          <label className={labelClass}>Loan Amount ($)</label>
-          <input type="number" value={loanAmount} onChange={(e) => setLoanAmount(parseFloat(e.target.value) || 0)} min={0} step={5000} className={inputClass} />
+          <label htmlFor="loan-amount" className={labelClass}>Loan Amount ($)</label>
+          <input id="loan-amount" type="number" value={loanAmount} onChange={(e) => setLoanAmount(parseFloat(e.target.value) || 0)} min={0} step={5000} className={inputClass} />
         </div>
         <div>
-          <label className={labelClass}>Interest Rate (%)</label>
-          <input type="number" value={rate} onChange={(e) => setRate(parseFloat(e.target.value) || 0)} min={0} max={20} step={0.125} className={inputClass} />
+          <label htmlFor="interest-rate" className={labelClass}>Interest Rate (%)</label>
+          <input id="interest-rate" type="number" value={rate} onChange={(e) => setRate(parseFloat(e.target.value) || 0)} min={0} max={20} step={0.125} className={inputClass} />
         </div>
         <div>
-          <label className={labelClass}>Loan Term (years)</label>
-          <input type="number" value={term} onChange={(e) => setTerm(parseFloat(e.target.value) || 1)} min={1} max={40} step={1} className={inputClass} />
+          <label htmlFor="loan-term" className={labelClass}>Loan Term (years)</label>
+          <input id="loan-term" type="number" value={term} onChange={(e) => setTerm(parseFloat(e.target.value) || 1)} min={1} max={40} step={1} className={inputClass} />
         </div>
         <div>
-          <label className={labelClass}>Extra Monthly Payment ($)</label>
-          <input type="number" value={extraPayment} onChange={(e) => setExtraPayment(parseFloat(e.target.value) || 0)} min={0} step={50} className={inputClass} />
+          <label htmlFor="extra-payment" className={labelClass}>Extra Monthly Payment ($)</label>
+          <input id="extra-payment" type="number" value={extraPayment} onChange={(e) => setExtraPayment(parseFloat(e.target.value) || 0)} min={0} step={50} className={inputClass} />
         </div>
       </div>
 

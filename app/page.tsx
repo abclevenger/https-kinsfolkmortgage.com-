@@ -101,11 +101,11 @@ export default function Home() {
 
       {/* Hero */}
       <section className="relative bg-primary overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-dark via-primary to-primary-light/40" />
+        <div className="absolute inset-0 bg-linear-to-br from-primary-dark via-primary to-primary-light/40" />
         <div className="hero-grid absolute inset-0 opacity-[0.03]" />
         <div className="absolute -top-24 -right-24 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
         <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-primary-light/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-accent/40 to-transparent" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 relative">
           <div className="grid lg:grid-cols-5 gap-12 items-center">
             <div className="lg:col-span-3">
@@ -128,7 +128,7 @@ export default function Home() {
                   className="inline-flex items-center justify-center px-8 py-4 bg-accent hover:bg-accent-dark text-primary-dark font-bold rounded-lg transition-all duration-200 shadow-xl shadow-accent/25 text-sm active:scale-95"
                 >
                   See What You Qualify For
-                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg aria-hidden="true" className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </Link>
@@ -139,9 +139,9 @@ export default function Home() {
                   Start a Conversation
                 </Link>
               </div>
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mt-8 text-white/40 text-xs font-sans">
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mt-8 text-white/60 text-xs font-sans">
                 <span className="flex items-center gap-1.5">
-                  <svg className="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg aria-hidden="true" className="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                   4.9 Average Rating
                 </span>
                 <span>500+ Families Helped</span>
@@ -162,18 +162,18 @@ export default function Home() {
                     sizes="72px"
                   />
                   <p className="text-white font-bold text-lg font-sans">Chaunci Witherspoon</p>
-                  <p className="text-white/50 text-sm font-sans">Owner / Mortgage Broker</p>
+                  <p className="text-white/70 text-sm font-sans">Owner / Mortgage Broker</p>
                   <p className="text-accent text-xs font-mono mt-1">NMLS# 1703351</p>
                 </div>
                 <div className="space-y-2 font-sans">
                   <a href="tel:8136380862" className="flex items-center gap-3 px-4 py-2.5 bg-white/5 hover:bg-white/10 rounded-lg transition-colors">
-                    <svg className="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg aria-hidden="true" className="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                     <span className="text-white/80 text-sm">(813) 638-0862</span>
                   </a>
                   <a href="mailto:info@kinsfolkmortgage.com" className="flex items-center gap-3 px-4 py-2.5 bg-white/5 hover:bg-white/10 rounded-lg transition-colors">
-                    <svg className="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg aria-hidden="true" className="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                     <span className="text-white/80 text-sm">info@kinsfolkmortgage.com</span>
@@ -214,7 +214,7 @@ export default function Home() {
                   className="block p-6 bg-white rounded-xl border border-border hover:border-accent/40 hover:shadow-lg transition-all duration-300 group"
                 >
                   <div className="w-10 h-10 rounded-lg bg-primary/5 group-hover:bg-accent/10 flex items-center justify-center mb-3 transition-colors duration-300">
-                    <svg className="w-5 h-5 text-primary group-hover:text-accent transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg aria-hidden="true" className="w-5 h-5 text-primary group-hover:text-accent transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={loan.icon} />
                     </svg>
                   </div>
@@ -224,7 +224,7 @@ export default function Home() {
                   <p className="text-text-muted text-sm mt-1 font-sans">{loan.desc}</p>
                   <span className="inline-flex items-center gap-1 text-accent text-sm font-semibold mt-3 font-sans group-hover:gap-2 transition-all">
                     Learn more
-                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg aria-hidden="true" className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </span>
@@ -294,7 +294,7 @@ export default function Home() {
               </div>
             </ScrollReveal>
             <ScrollReveal delay={2}>
-              <div className="rounded-2xl overflow-hidden shadow-lg aspect-[3/2]">
+              <div className="rounded-2xl overflow-hidden shadow-lg aspect-3/2">
                 <Image
                   src="/images/happy-homebuyers.jpg"
                   alt="First-time homebuyers closing on their new home with help from a Wesley Chapel mortgage broker"
@@ -326,7 +326,7 @@ export default function Home() {
                   <span className="absolute top-3 right-4 text-accent/20 text-5xl leading-none font-serif select-none" aria-hidden="true">&ldquo;</span>
                   <div className="flex gap-1 mb-3">
                     {[...Array(5)].map((_, j) => (
-                      <svg key={j} className="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                      <svg key={j} aria-hidden="true" className="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                       </svg>
                     ))}
@@ -338,7 +338,7 @@ export default function Home() {
                     </div>
                     <div>
                       <p className="text-white font-semibold text-sm font-sans">{t.name}</p>
-                      <p className="text-white/40 text-xs font-sans">{t.role}</p>
+                      <p className="text-white/60 text-xs font-sans">{t.role}</p>
                     </div>
                   </div>
                 </div>
@@ -387,7 +387,7 @@ export default function Home() {
                   <ul className="space-y-2">
                     {["A real conversation — not a script", "Honest answers about what you qualify for", "A clear explanation of your loan options", "No surprise fees or hidden costs"].map((item) => (
                       <li key={item} className="flex items-start gap-2 text-sm text-text-muted">
-                        <svg className="w-4 h-4 text-success flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg aria-hidden="true" className="w-4 h-4 text-success shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                         {item}
@@ -429,7 +429,7 @@ export default function Home() {
                 className="inline-flex items-center gap-2 px-8 py-4 bg-primary hover:bg-primary-dark text-white font-bold rounded-lg transition-colors text-sm whitespace-nowrap font-sans"
               >
                 Try the Calculators
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg aria-hidden="true" className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
@@ -511,7 +511,7 @@ export default function Home() {
 
       {/* Final CTA */}
       <section className="py-20 bg-primary relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-dark via-primary to-primary-light/30" />
+        <div className="absolute inset-0 bg-linear-to-br from-primary-dark via-primary to-primary-light/30" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Ready to Talk to a Wesley Chapel Mortgage Broker?

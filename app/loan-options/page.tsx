@@ -200,7 +200,7 @@ export default function LoanOptionsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-gradient-to-br from-primary-dark via-primary to-primary-light/30 py-24 overflow-hidden">
+      <section className="relative bg-linear-to-br from-primary-dark via-primary to-primary-light/30 py-24 overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Loan Options" }]} />
           <div className="text-center mt-6">

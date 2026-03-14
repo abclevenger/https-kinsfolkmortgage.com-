@@ -41,21 +41,21 @@ export default function MortgagePaymentCalculator({ onGetQuote }: Props) {
     <div className="space-y-6">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium text-primary mb-1">Home Price</label>
-          <input type="number" value={homePrice} onChange={(e) => setHomePrice(+e.target.value || 0)} min={0} step={5000} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
+          <label htmlFor="home-price" className="block text-sm font-medium text-primary mb-1">Home Price</label>
+          <input id="home-price" type="number" value={homePrice} onChange={(e) => setHomePrice(+e.target.value || 0)} min={0} step={5000} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
         </div>
         <div>
-          <label className="block text-sm font-medium text-primary mb-1">Down Payment (%)</label>
-          <input type="number" value={downPaymentPct} onChange={(e) => setDownPaymentPct(+e.target.value || 0)} min={0} max={100} step={1} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
+          <label htmlFor="down-payment-pct" className="block text-sm font-medium text-primary mb-1">Down Payment (%)</label>
+          <input id="down-payment-pct" type="number" value={downPaymentPct} onChange={(e) => setDownPaymentPct(+e.target.value || 0)} min={0} max={100} step={1} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
           <p className="text-xs text-text-muted mt-1">{fmtCurrency(homePrice * (downPaymentPct / 100))}</p>
         </div>
         <div>
-          <label className="block text-sm font-medium text-primary mb-1">Interest Rate (%)</label>
-          <input type="number" value={rate} onChange={(e) => setRate(+e.target.value || 0)} min={0} max={20} step={0.125} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
+          <label htmlFor="interest-rate" className="block text-sm font-medium text-primary mb-1">Interest Rate (%)</label>
+          <input id="interest-rate" type="number" value={rate} onChange={(e) => setRate(+e.target.value || 0)} min={0} max={20} step={0.125} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
         </div>
         <div>
-          <label className="block text-sm font-medium text-primary mb-1">Loan Term (years)</label>
-          <select value={term} onChange={(e) => setTerm(+e.target.value)} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm bg-white">
+          <label htmlFor="loan-term" className="block text-sm font-medium text-primary mb-1">Loan Term (years)</label>
+          <select id="loan-term" value={term} onChange={(e) => setTerm(+e.target.value)} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm bg-white">
             <option value={30}>30 years</option>
             <option value={20}>20 years</option>
             <option value={15}>15 years</option>

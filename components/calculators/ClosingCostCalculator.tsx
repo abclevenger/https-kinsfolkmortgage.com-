@@ -62,16 +62,16 @@ export default function ClosingCostCalculator({ onGetQuote }: Props) {
     <div className="space-y-6">
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div>
-          <label className="block text-sm font-medium text-primary mb-1">Home Price</label>
-          <input type="number" value={homePrice} onChange={(e) => setHomePrice(+e.target.value || 0)} min={0} step={5000} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
+          <label htmlFor="home-price" className="block text-sm font-medium text-primary mb-1">Home Price</label>
+          <input id="home-price" type="number" value={homePrice} onChange={(e) => setHomePrice(+e.target.value || 0)} min={0} step={5000} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
         </div>
         <div>
-          <label className="block text-sm font-medium text-primary mb-1">Down Payment (%)</label>
-          <input type="number" value={downPaymentPct} onChange={(e) => setDownPaymentPct(+e.target.value || 0)} min={0} max={100} step={1} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
+          <label htmlFor="down-payment-pct" className="block text-sm font-medium text-primary mb-1">Down Payment (%)</label>
+          <input id="down-payment-pct" type="number" value={downPaymentPct} onChange={(e) => setDownPaymentPct(+e.target.value || 0)} min={0} max={100} step={1} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
         </div>
         <div>
-          <label className="block text-sm font-medium text-primary mb-1">State</label>
-          <select value={state} onChange={(e) => setState(e.target.value)} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm bg-white">
+          <label htmlFor="state" className="block text-sm font-medium text-primary mb-1">State</label>
+          <select id="state" value={state} onChange={(e) => setState(e.target.value)} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm bg-white">
             <option value="FL">Florida</option>
             <option value="GA">Georgia</option>
             <option value="TX">Texas</option>

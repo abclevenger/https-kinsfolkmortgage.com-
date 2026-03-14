@@ -88,16 +88,16 @@ export default function RefinanceBreakEvenCalculator({ onGetQuote }: Props) {
         <p className="text-sm font-semibold text-primary mb-3 font-sans">Current Loan</p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div>
-            <label className={labelClass}>Loan Balance ($)</label>
-            <input type="number" value={currentBalance} onChange={(e) => setCurrentBalance(parseFloat(e.target.value) || 0)} min={0} step={5000} className={inputClass} />
+            <label htmlFor="loan-balance" className={labelClass}>Loan Balance ($)</label>
+            <input id="loan-balance" type="number" value={currentBalance} onChange={(e) => setCurrentBalance(parseFloat(e.target.value) || 0)} min={0} step={5000} className={inputClass} />
           </div>
           <div>
-            <label className={labelClass}>Current Rate (%)</label>
-            <input type="number" value={currentRate} onChange={(e) => setCurrentRate(parseFloat(e.target.value) || 0)} min={0} max={20} step={0.125} className={inputClass} />
+            <label htmlFor="current-rate" className={labelClass}>Current Rate (%)</label>
+            <input id="current-rate" type="number" value={currentRate} onChange={(e) => setCurrentRate(parseFloat(e.target.value) || 0)} min={0} max={20} step={0.125} className={inputClass} />
           </div>
           <div>
-            <label className={labelClass}>Current Monthly Payment ($)</label>
-            <input type="number" value={currentPayment} onChange={(e) => setCurrentPayment(parseFloat(e.target.value) || 0)} min={0} step={50} className={inputClass} />
+            <label htmlFor="current-payment" className={labelClass}>Current Monthly Payment ($)</label>
+            <input id="current-payment" type="number" value={currentPayment} onChange={(e) => setCurrentPayment(parseFloat(e.target.value) || 0)} min={0} step={50} className={inputClass} />
           </div>
         </div>
       </div>
@@ -106,16 +106,16 @@ export default function RefinanceBreakEvenCalculator({ onGetQuote }: Props) {
         <p className="text-sm font-semibold text-primary mb-3 font-sans">New Loan</p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div>
-            <label className={labelClass}>New Rate (%)</label>
-            <input type="number" value={newRate} onChange={(e) => setNewRate(parseFloat(e.target.value) || 0)} min={0} max={20} step={0.125} className={inputClass} />
+            <label htmlFor="new-rate" className={labelClass}>New Rate (%)</label>
+            <input id="new-rate" type="number" value={newRate} onChange={(e) => setNewRate(parseFloat(e.target.value) || 0)} min={0} max={20} step={0.125} className={inputClass} />
           </div>
           <div>
-            <label className={labelClass}>New Term (years)</label>
-            <input type="number" value={newTerm} onChange={(e) => setNewTerm(parseFloat(e.target.value) || 1)} min={1} max={40} step={1} className={inputClass} />
+            <label htmlFor="new-term" className={labelClass}>New Term (years)</label>
+            <input id="new-term" type="number" value={newTerm} onChange={(e) => setNewTerm(parseFloat(e.target.value) || 1)} min={1} max={40} step={1} className={inputClass} />
           </div>
           <div>
-            <label className={labelClass}>Closing Costs ($)</label>
-            <input type="number" value={closingCosts} onChange={(e) => setClosingCosts(parseFloat(e.target.value) || 0)} min={0} step={500} className={inputClass} />
+            <label htmlFor="closing-costs" className={labelClass}>Closing Costs ($)</label>
+            <input id="closing-costs" type="number" value={closingCosts} onChange={(e) => setClosingCosts(parseFloat(e.target.value) || 0)} min={0} step={500} className={inputClass} />
             <p className="text-xs text-text-muted mt-1">Default: 2% = {fmtCurrency(defaultClosingCosts)}</p>
           </div>
         </div>

@@ -85,8 +85,8 @@ export default function GeoLandingPage({ page }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       {/* Hero */}
-      <section className="relative bg-gradient-to-br from-primary-dark via-primary to-primary-light/30 py-20 lg:py-28 overflow-hidden">
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
+      <section className="relative bg-linear-to-br from-primary-dark via-primary to-primary-light/30 py-20 lg:py-28 overflow-hidden">
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-accent/40 to-transparent" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: page.city }]} />
           <div className="grid lg:grid-cols-2 gap-12 items-center mt-6">
@@ -120,7 +120,7 @@ export default function GeoLandingPage({ page }: Props) {
                   (813) 638-0862
                 </a>
               </div>
-              <div className="flex items-center gap-5 mt-6 text-white/40 text-xs font-sans">
+              <div className="flex items-center gap-5 mt-6 text-white/60 text-xs font-sans">
                 <span className="flex items-center gap-1.5">
                   <svg className="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
                   4.9 Average Rating
@@ -129,9 +129,9 @@ export default function GeoLandingPage({ page }: Props) {
               </div>
             </div>
             <div className="hidden lg:block">
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                <h2 className="text-white font-bold text-lg mb-1 font-sans">Get Pre-Qualified Today</h2>
-                <p className="text-white/50 text-sm mb-4 font-sans">No commitment. No obligation. Fast response.</p>
+              <div className="bg-white rounded-2xl p-6 shadow-lg">
+                <h2 className="text-primary font-bold text-lg mb-1 font-sans">Get Pre-Qualified Today</h2>
+                <p className="text-text-muted text-sm mb-4 font-sans">No commitment. No obligation. Fast response.</p>
                 <LeadForm formName={`Geo - ${page.city}`} buttonText="Get Pre-Qualified" compact />
               </div>
             </div>
@@ -153,7 +153,7 @@ export default function GeoLandingPage({ page }: Props) {
             ].map((stat) => (
               <div key={stat.label}>
                 <p className="text-accent font-bold text-lg sm:text-xl">{stat.value}</p>
-                <p className="text-white/40 text-xs mt-0.5 font-sans">{stat.label}</p>
+                <p className="text-white/60 text-xs mt-0.5 font-sans">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -191,7 +191,7 @@ export default function GeoLandingPage({ page }: Props) {
                   <ul className="space-y-2">
                     {page.whyUs.map((item) => (
                       <li key={item} className="flex items-start gap-2 text-sm text-text-muted font-sans">
-                        <svg className="w-4 h-4 text-success flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-4 h-4 text-success shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                         {item}

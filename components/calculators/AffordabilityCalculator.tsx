@@ -46,21 +46,21 @@ export default function AffordabilityCalculator({ onGetQuote }: Props) {
     <div className="space-y-6">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium text-primary mb-1">Annual Gross Income</label>
-          <input type="number" value={annualIncome} onChange={(e) => setAnnualIncome(+e.target.value || 0)} min={0} step={5000} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
+          <label htmlFor="annual-income" className="block text-sm font-medium text-primary mb-1">Annual Gross Income</label>
+          <input id="annual-income" type="number" value={annualIncome} onChange={(e) => setAnnualIncome(+e.target.value || 0)} min={0} step={5000} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
         </div>
         <div>
-          <label className="block text-sm font-medium text-primary mb-1">Monthly Debts</label>
-          <input type="number" value={monthlyDebt} onChange={(e) => setMonthlyDebt(+e.target.value || 0)} min={0} step={50} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
+          <label htmlFor="monthly-debts" className="block text-sm font-medium text-primary mb-1">Monthly Debts</label>
+          <input id="monthly-debts" type="number" value={monthlyDebt} onChange={(e) => setMonthlyDebt(+e.target.value || 0)} min={0} step={50} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
           <p className="text-xs text-text-muted mt-1">Car payments, student loans, credit cards, etc.</p>
         </div>
         <div>
-          <label className="block text-sm font-medium text-primary mb-1">Savings for Down Payment</label>
-          <input type="number" value={downPaymentSaved} onChange={(e) => setDownPaymentSaved(+e.target.value || 0)} min={0} step={5000} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
+          <label htmlFor="down-payment-savings" className="block text-sm font-medium text-primary mb-1">Savings for Down Payment</label>
+          <input id="down-payment-savings" type="number" value={downPaymentSaved} onChange={(e) => setDownPaymentSaved(+e.target.value || 0)} min={0} step={5000} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
         </div>
         <div>
-          <label className="block text-sm font-medium text-primary mb-1">Interest Rate (%)</label>
-          <input type="number" value={rate} onChange={(e) => setRate(+e.target.value || 0)} min={0} max={20} step={0.125} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
+          <label htmlFor="interest-rate" className="block text-sm font-medium text-primary mb-1">Interest Rate (%)</label>
+          <input id="interest-rate" type="number" value={rate} onChange={(e) => setRate(+e.target.value || 0)} min={0} max={20} step={0.125} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
         </div>
       </div>
 

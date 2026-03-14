@@ -96,7 +96,7 @@ export default function ReviewsPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
 
-      <section className="bg-gradient-to-br from-primary-dark via-primary to-primary-light/30 py-20">
+      <section className="bg-linear-to-br from-primary-dark via-primary to-primary-light/30 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Reviews" }]} />
           <div className="text-center mt-6">
@@ -107,7 +107,7 @@ export default function ReviewsPage() {
             <div className="flex items-center justify-center gap-2 mt-4">
               <Stars count={5} />
               <span className="text-accent font-bold font-sans">{avgRating}</span>
-              <span className="text-white/50 text-sm font-sans">({reviews.length} reviews)</span>
+              <span className="text-white/70 text-sm font-sans">({reviews.length} reviews)</span>
             </div>
           </div>
         </div>

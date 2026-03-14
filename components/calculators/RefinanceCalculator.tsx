@@ -39,16 +39,16 @@ export default function RefinanceCalculator({ onGetQuote }: Props) {
         <h4 className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">Current Loan</h4>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div>
-            <label className="block text-sm font-medium text-primary mb-1">Remaining Balance</label>
-            <input type="number" value={currentBalance} onChange={(e) => setCurrentBalance(+e.target.value || 0)} min={0} step={5000} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
+            <label htmlFor="remaining-balance" className="block text-sm font-medium text-primary mb-1">Remaining Balance</label>
+            <input id="remaining-balance" type="number" value={currentBalance} onChange={(e) => setCurrentBalance(+e.target.value || 0)} min={0} step={5000} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
           </div>
           <div>
-            <label className="block text-sm font-medium text-primary mb-1">Current Rate (%)</label>
-            <input type="number" value={currentRate} onChange={(e) => setCurrentRate(+e.target.value || 0)} min={0} max={20} step={0.125} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
+            <label htmlFor="current-rate" className="block text-sm font-medium text-primary mb-1">Current Rate (%)</label>
+            <input id="current-rate" type="number" value={currentRate} onChange={(e) => setCurrentRate(+e.target.value || 0)} min={0} max={20} step={0.125} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
           </div>
           <div>
-            <label className="block text-sm font-medium text-primary mb-1">Years Remaining</label>
-            <input type="number" value={currentTerm} onChange={(e) => setCurrentTerm(+e.target.value || 0)} min={1} max={30} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
+            <label htmlFor="years-remaining" className="block text-sm font-medium text-primary mb-1">Years Remaining</label>
+            <input id="years-remaining" type="number" value={currentTerm} onChange={(e) => setCurrentTerm(+e.target.value || 0)} min={1} max={30} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
           </div>
         </div>
       </div>
@@ -57,12 +57,12 @@ export default function RefinanceCalculator({ onGetQuote }: Props) {
         <h4 className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">New Loan</h4>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-primary mb-1">New Rate (%)</label>
-            <input type="number" value={newRate} onChange={(e) => setNewRate(+e.target.value || 0)} min={0} max={20} step={0.125} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
+            <label htmlFor="new-rate" className="block text-sm font-medium text-primary mb-1">New Rate (%)</label>
+            <input id="new-rate" type="number" value={newRate} onChange={(e) => setNewRate(+e.target.value || 0)} min={0} max={20} step={0.125} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
           </div>
           <div>
-            <label className="block text-sm font-medium text-primary mb-1">New Term (years)</label>
-            <select value={newTerm} onChange={(e) => setNewTerm(+e.target.value)} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm bg-white">
+            <label htmlFor="new-term" className="block text-sm font-medium text-primary mb-1">New Term (years)</label>
+            <select id="new-term" value={newTerm} onChange={(e) => setNewTerm(+e.target.value)} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm bg-white">
               <option value={30}>30 years</option>
               <option value={20}>20 years</option>
               <option value={15}>15 years</option>

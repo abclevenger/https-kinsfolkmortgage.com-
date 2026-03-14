@@ -92,7 +92,7 @@ export default function VALoansPage() {
     <>
       {/* Hero */}
       <section className="relative bg-primary py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-dark/50 to-primary/80" />
+        <div className="absolute inset-0 bg-linear-to-br from-primary-dark/50 to-primary/80" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs
             items={[
@@ -182,7 +182,7 @@ export default function VALoansPage() {
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <svg
-                        className="w-5 h-5 text-accent flex-shrink-0 mt-0.5"
+                        className="w-5 h-5 text-accent shrink-0 mt-0.5"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"

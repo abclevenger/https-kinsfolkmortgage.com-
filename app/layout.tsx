@@ -1,22 +1,31 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { DM_Sans, DM_Serif_Display } from "next/font/google";
+import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import StickyMobileCTA from "@/components/StickyMobileCTA";
-import BackToTop from "@/components/BackToTop";
+import ClientExtras from "@/components/ClientExtras";
 import "./globals.css";
 
 const sans = DM_Sans({
   variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "700"],
+  display: "swap",
 });
 
 const serif = DM_Serif_Display({
   variable: "--font-serif",
   subsets: ["latin"],
   weight: ["400"],
+  display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#1B3A5C",
+};
 
 export const metadata: Metadata = {
   title: {
@@ -114,9 +123,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://widgets.leadconnectorhq.com" />
         <script
           type="application/ld+json"
@@ -127,13 +133,12 @@ export default function RootLayout({
         <Header />
         <main id="main-content" className="pt-20">{children}</main>
         <Footer />
-        <StickyMobileCTA />
-        <BackToTop />
-        <script
+        <ClientExtras />
+        <Script
           src="https://widgets.leadconnectorhq.com/loader.js"
           data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
           data-widget-id="69b4d3df0eb19983ff9ee461"
-          defer
+          strategy="lazyOnload"
         />
       </body>
     </html>

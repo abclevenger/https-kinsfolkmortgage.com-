@@ -91,8 +91,8 @@ export default function DTICalculator({ onGetQuote }: Props) {
     <div className="space-y-6">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="sm:col-span-2">
-          <label className={labelClass}>Monthly Gross Income ($)</label>
-          <input type="number" value={monthlyIncome} onChange={(e) => setMonthlyIncome(parseFloat(e.target.value) || 0)} min={0} step={500} className={inputClass} />
+          <label htmlFor="monthly-income" className={labelClass}>Monthly Gross Income ($)</label>
+          <input id="monthly-income" type="number" value={monthlyIncome} onChange={(e) => setMonthlyIncome(parseFloat(e.target.value) || 0)} min={0} step={500} className={inputClass} />
         </div>
       </div>
 
@@ -100,27 +100,27 @@ export default function DTICalculator({ onGetQuote }: Props) {
         <p className="text-sm font-semibold text-primary mb-3 font-sans">Monthly Debts</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label className={labelClass}>Car Payment ($)</label>
-            <input type="number" value={carPayment} onChange={(e) => setCarPayment(parseFloat(e.target.value) || 0)} min={0} step={25} className={inputClass} />
+            <label htmlFor="car-payment" className={labelClass}>Car Payment ($)</label>
+            <input id="car-payment" type="number" value={carPayment} onChange={(e) => setCarPayment(parseFloat(e.target.value) || 0)} min={0} step={25} className={inputClass} />
           </div>
           <div>
-            <label className={labelClass}>Student Loans ($)</label>
-            <input type="number" value={studentLoans} onChange={(e) => setStudentLoans(parseFloat(e.target.value) || 0)} min={0} step={25} className={inputClass} />
+            <label htmlFor="student-loans" className={labelClass}>Student Loans ($)</label>
+            <input id="student-loans" type="number" value={studentLoans} onChange={(e) => setStudentLoans(parseFloat(e.target.value) || 0)} min={0} step={25} className={inputClass} />
           </div>
           <div>
-            <label className={labelClass}>Credit Card Minimums ($)</label>
-            <input type="number" value={creditCards} onChange={(e) => setCreditCards(parseFloat(e.target.value) || 0)} min={0} step={25} className={inputClass} />
+            <label htmlFor="credit-cards" className={labelClass}>Credit Card Minimums ($)</label>
+            <input id="credit-cards" type="number" value={creditCards} onChange={(e) => setCreditCards(parseFloat(e.target.value) || 0)} min={0} step={25} className={inputClass} />
           </div>
           <div>
-            <label className={labelClass}>Other Debts ($)</label>
-            <input type="number" value={otherDebts} onChange={(e) => setOtherDebts(parseFloat(e.target.value) || 0)} min={0} step={25} className={inputClass} />
+            <label htmlFor="other-debts" className={labelClass}>Other Debts ($)</label>
+            <input id="other-debts" type="number" value={otherDebts} onChange={(e) => setOtherDebts(parseFloat(e.target.value) || 0)} min={0} step={25} className={inputClass} />
           </div>
         </div>
       </div>
 
       <div>
-        <label className={labelClass}>Proposed Housing Payment ($)</label>
-        <input type="number" value={proposedHousing} onChange={(e) => setProposedHousing(parseFloat(e.target.value) || 0)} min={0} step={100} className={inputClass} />
+        <label htmlFor="proposed-housing" className={labelClass}>Proposed Housing Payment ($)</label>
+        <input id="proposed-housing" type="number" value={proposedHousing} onChange={(e) => setProposedHousing(parseFloat(e.target.value) || 0)} min={0} step={100} className={inputClass} />
         <p className="text-xs text-text-muted mt-1">Mortgage + property tax + insurance</p>
       </div>
 

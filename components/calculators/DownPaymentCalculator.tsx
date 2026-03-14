@@ -35,20 +35,20 @@ export default function DownPaymentCalculator({ onGetQuote }: Props) {
     <div className="space-y-6">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium text-primary mb-1">Home Price</label>
-          <input type="number" value={homePrice} onChange={(e) => setHomePrice(+e.target.value || 0)} min={0} step={5000} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
+          <label htmlFor="home-price" className="block text-sm font-medium text-primary mb-1">Home Price</label>
+          <input id="home-price" type="number" value={homePrice} onChange={(e) => setHomePrice(+e.target.value || 0)} min={0} step={5000} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
         </div>
         <div>
-          <label className="block text-sm font-medium text-primary mb-1">Target Down Payment (%)</label>
-          <input type="number" value={downPaymentPct} onChange={(e) => setDownPaymentPct(+e.target.value || 0)} min={0} max={100} step={1} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
+          <label htmlFor="down-payment-pct" className="block text-sm font-medium text-primary mb-1">Target Down Payment (%)</label>
+          <input id="down-payment-pct" type="number" value={downPaymentPct} onChange={(e) => setDownPaymentPct(+e.target.value || 0)} min={0} max={100} step={1} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
         </div>
         <div>
-          <label className="block text-sm font-medium text-primary mb-1">Current Savings</label>
-          <input type="number" value={currentSavings} onChange={(e) => setCurrentSavings(+e.target.value || 0)} min={0} step={1000} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
+          <label htmlFor="current-savings" className="block text-sm font-medium text-primary mb-1">Current Savings</label>
+          <input id="current-savings" type="number" value={currentSavings} onChange={(e) => setCurrentSavings(+e.target.value || 0)} min={0} step={1000} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
         </div>
         <div>
-          <label className="block text-sm font-medium text-primary mb-1">Monthly Savings</label>
-          <input type="number" value={monthlySavings} onChange={(e) => setMonthlySavings(+e.target.value || 0)} min={0} step={100} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
+          <label htmlFor="monthly-savings" className="block text-sm font-medium text-primary mb-1">Monthly Savings</label>
+          <input id="monthly-savings" type="number" value={monthlySavings} onChange={(e) => setMonthlySavings(+e.target.value || 0)} min={0} step={100} className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-accent focus:outline-none text-sm" />
         </div>
       </div>
 

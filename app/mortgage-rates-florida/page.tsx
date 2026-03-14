@@ -132,7 +132,7 @@ export default function MortgageRatesFloridaPage() {
               current rates for conventional, FHA, VA, ARM, and jumbo mortgages —
               then get a personalized quote from Kinsfolk Mortgage.
             </p>
-            <p className="text-white/50 text-sm font-sans">
+            <p className="text-white/70 text-sm font-sans">
               Last updated: {today}
             </p>
           </div>
