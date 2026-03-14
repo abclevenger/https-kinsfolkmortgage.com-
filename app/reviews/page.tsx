@@ -133,7 +133,7 @@ export default function ReviewsPage() {
                 alt="Clients celebrating home closing"
                 width={600}
                 height={400}
-                className="w-full h-64 object-cover"
+                className="w-full h-64 object-cover object-top"
                 loading="lazy"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
